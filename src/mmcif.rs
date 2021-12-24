@@ -133,14 +133,14 @@ impl MmCif {
 
 		for line in ( self.atom_site_data ).iter() {
 			let compornents : Vec<&str> = line.split_whitespace().collect();
-			self.group_pdb    .push( compornents[ ( self.category_order )[ 0 ] ].to_string() );
+			self.group_pdb.push(     compornents[ ( self.category_order )[ 0 ] ].to_string() );
 			self.label_atom_id.push( compornents[ ( self.category_order )[ 1 ] ].to_string() );
-			self.label_alt_id .push( compornents[ ( self.category_order )[ 2 ] ].to_string() );
+			self.label_alt_id.push(  compornents[ ( self.category_order )[ 2 ] ].to_string() );
 			self.label_comp_id.push( compornents[ ( self.category_order )[ 3 ] ].to_string() );
 			self.label_asym_id.push( compornents[ ( self.category_order )[ 4 ] ].to_string() );
-			self.auth_comp_id .push( compornents[ ( self.category_order )[ 5 ] ].to_string() );
-			self.auth_asym_id .push( compornents[ ( self.category_order )[ 6 ] ].to_string() );
-			self.auth_atom_id .push( compornents[ ( self.category_order )[ 7 ] ].to_string() );
+			self.auth_comp_id.push(  compornents[ ( self.category_order )[ 5 ] ].to_string() );
+			self.auth_asym_id.push(  compornents[ ( self.category_order )[ 6 ] ].to_string() );
+			self.auth_atom_id.push(  compornents[ ( self.category_order )[ 7 ] ].to_string() );
 		}
 	}
 

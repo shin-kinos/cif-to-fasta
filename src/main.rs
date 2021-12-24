@@ -47,14 +47,14 @@ fn main() {
 	print!( "auth_atom_id"    );
 	print!( "\n" );
 	for i in 0 .. ( data.group_pdb ).len() {
-		print!( "{}\t", data.group_pdb    [ i ] );
-		print!( "{}\t", data.label_atom_id[ i ] );
-		print!( "{}\t", data.label_alt_id [ i ] );
-		print!( "{}\t", data.label_comp_id[ i ] );
-		print!( "{}\t", data.label_asym_id[ i ] );
-		print!( "{}\t", data.auth_comp_id [ i ] );
-		print!( "{}\t", data.auth_asym_id [ i ] );
-		print!( "{}"  , data.auth_atom_id [ i ] );
+		print!( "{}\t", ( data.group_pdb )[ i ]     );
+		print!( "{}\t", ( data.label_atom_id )[ i ] );
+		print!( "{}\t", ( data.label_alt_id )[ i ]  );
+		print!( "{}\t", ( data.label_comp_id )[ i ] );
+		print!( "{}\t", ( data.label_asym_id )[ i ] );
+		print!( "{}\t", ( data.auth_comp_id )[ i ]  );
+		print!( "{}\t", ( data.auth_asym_id )[ i ]  );
+		print!( "{}"  , ( data.auth_atom_id )[ i ]  );
 		print!( "\n" );
 	}
 	*/
@@ -81,14 +81,14 @@ fn main() {
 	/* Show result. */
 	result::show_result(
 		&res_list_1,
-		&( opts.title  ),
+		&( opts.title ),
 		&( opts.output )
 	);
 
 	/* Save result. */
 	result::save_result(
 		&res_list_1,
-		&( opts.title  ),
+		&( opts.title ),
 		&( opts.output )
 	);
 
